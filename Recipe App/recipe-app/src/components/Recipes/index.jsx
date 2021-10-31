@@ -9,12 +9,14 @@ const Recipies = () => {
   const handleShow = () => setShow(true);
   const renderedCards = [1, 2, 3].map((card) => {
     return (
-      <Card onClick={handleShow} style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={Image} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>Food Recipe {card}</Card.Title>
           <Card.Text>{card} description</Card.Text>
-          <Button variant="primary">Action Button</Button>
+          <Button onClick={handleShow} variant="primary">
+            Detailed description
+          </Button>
         </Card.Body>
       </Card>
     );
